@@ -1,0 +1,10 @@
+body{
+    background-color: yellow;
+}
+button {
+    width: 122px;
+    height: 49px;
+    border-radius: 30px;
+    background: black;
+    box-shadow;
+}
