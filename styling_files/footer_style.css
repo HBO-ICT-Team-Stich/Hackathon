@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    height: 100px;
+    flex-shrink: 0;
+}
+
+.nav-button {
+    width: 80px;
+    height: 80px;
+    border: none;
+    border-radius: 16px;
+    cursor: pointer;
+    display: grid;
+    place-items: center;
+    text-decoration: none;
+    transition: transform 0.09s ease, box-shadow 0.09s ease;
+    flex: 0 0 80px;
+}
+
+.button-icon {
+    width: 36px;
+    height: 36px;
+    display: block;
+    object-fit: contain;
+}
+
+.Home-button {
+    background: linear-gradient(180deg, #ffc81f 0%, #f5b400 100%);
+    box-shadow: 0 9px 0 #c78900;
+}
+
+.Home-button:hover {
+    transform: translateY(2px);
+    box-shadow: 0 7px 0 #c78900;
+}
+
+.Home-button:active {
+    transform: translateY(6px);
+    box-shadow: 0 3px 0 #c78900;
+}
+
+.Map-button {
+    background: linear-gradient(180deg, #BF1923 0%, #e62532 100%);
+    box-shadow: 0 9px 0 #BF1923;
+}
+
+.Map-button:hover {
+    transform: translateY(2px);
+    box-shadow: 0 7px 0 #BF1923;
+}
+
+.Map-button:active {
+    transform: translateY(6px);
+    box-shadow: 0 3px 0 #BF1923;
+}
+
+.Profile-button {
+    background: linear-gradient(180deg, #42945A 0%, #50AF6C 100%);
+    box-shadow: 0 9px 0 #42945A;
+}
+
+.Profile-button:hover {
+    transform: translateY(2px);
+    box-shadow: 0 7px 0 #42945A;
+}
+
+.Profile-button:active {
+    transform: translateY(6px);
+    box-shadow: 0 3px 0 #42945A;
+}
+
+.Notification-button {
+    background: linear-gradient(180deg, #586899 0%, #697DB8 100%);
+    box-shadow: 0 9px 0 #586899;
+}
+
+.Notification-button:hover {
+    transform: translateY(2px);
+    box-shadow: 0 7px 0 #586899;
+}
+
+.Notification-button:active {
+    transform: translateY(6px);
+    box-shadow: 0 3px 0 #586899;
+}
+
+.Footer-div {
+    width: 412px;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 2px 8px 12px 8px;
+    background-color: black;
+    border-top-left-radius: 35px;
+    border-top-right-radius: 35px;
+}

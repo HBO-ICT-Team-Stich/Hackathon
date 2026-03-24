@@ -1,0 +1,60 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    height: 96px;
+    flex-shrink: 0;
+}
+
+.navbar-div {
+    width: 412px;
+    height: 96px;
+    display: grid;
+    grid-template-columns: 56px 1fr 56px;
+    align-items: center;
+    padding: 0 12px;
+    background-color: black;
+    border-bottom-left-radius: 35px;
+    border-bottom-right-radius: 35px;
+}
+
+.back-button {
+    width: 48px;
+    height: 48px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    text-decoration: none;
+    justify-self: start;
+}
+
+.back-icon {
+    width: 48px;
+    height: 48px;
+    fill: none;
+    stroke: #ffffff;
+    stroke-width: 2.2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.navbar-title {
+    color: #ffffff;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 33px;
+    font-weight: 600;
+    line-height: 1;
+    justify-self: center;
+}
+
+.navbar-logo {
+    width: 65px;
+    height: 64px;
+    object-fit: contain;
+    justify-self: end;
+}
