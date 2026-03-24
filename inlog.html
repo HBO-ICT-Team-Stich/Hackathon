@@ -1,13 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="stylesheet" href="styles.css"></link>
+  <link rel="stylesheet" href="styling_files/inlog_style.css"></link>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Titles</title>
+  <script src="scripts/inlog.js" defer></script>
+  <title>Inloggen</title>
 </head>
 <body>
-  <button class="button" aria-label="Home">Home</button>
+  <main class="login-page">
+    <div class="login-card">
+      <button class="language-button" aria-label="Language">
+        <svg viewBox="0 0 24 24" class="globe-icon" aria-hidden="true">
+          <circle cx="12" cy="12" r="8.5" />
+          <path d="M3.5 12h17" />
+          <path d="M12 3.5c2.3 2 3.8 5.3 3.8 8.5S14.3 18.5 12 20.5" />
+          <path d="M12 3.5c-2.3 2-3.8 5.3-3.8 8.5s1.5 6.5 3.8 8.5" />
+        </svg>
+      </button>
 
+      <form class="login-form" action="#" method="post">
+        <div class="login-error" aria-live="polite">
+          <p class="login-error-title">Probeer opnieuw</p>
+          <p class="login-error-text">de ingevoerde gegevens zijn onjuist</p>
+        </div>
+        <input class="login-input" type="text" name="studentnummer" placeholder="Studentnummer" aria-label="Studentnummer" />
+        <input class="login-input" type="password" name="wachtwoord" placeholder="Wachtwoord" aria-label="Wachtwoord" />
+        <a class="forgot-link" href="#">Wachtwoord vergeten?</a>
+        <button class="login-button" type="submit">Login</button>
+      </form>
+
+      <img class="brand-logo" src="images/windesheimlogo_login.png" alt="Windesheim" />
+    </div>
+  </main>
 </body>
 </html>
