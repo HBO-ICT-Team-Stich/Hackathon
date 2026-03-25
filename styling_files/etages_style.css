@@ -3,12 +3,25 @@
     height: 78px;
     background-color: black;
     color: white;
+    border: none;
     z-index: 50;
     margin: 16px;
     border-radius: 30px;
     font-size: 32px;
     font-weight: 500;
     box-shadow: 0 7px 0 white;
+    cursor: pointer;
+    transition: transform 0.09s ease, box-shadow 0.09s ease;
+}
+
+.verdieping_buttons:hover {
+    transform: translateY(2px);
+    box-shadow: 0 5px 0 white;
+}
+
+.verdieping_buttons:active {
+    transform: translateY(6px);
+    box-shadow: 0 2px 0 white;
 }
 
 .etages_buttons {
