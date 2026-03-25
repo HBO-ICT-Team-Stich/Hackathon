@@ -48,4 +48,45 @@ main {
     position: relative;
     z-index: 10;
 }
+
+.profile-picture {
+    height: 25px;
+    width: 25px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    z-index: 10;
+}
+
+.profile-container-top {
+    margin: 10px;
+    padding: 20px;
+    border-radius: 30px;
+    background: black;
+    z-index: 5;
+    font-family: Roboto, serif;
+    display: flex;
+    flex-direction: column;
+}
+
+.Profile-Button {
+    color: white;
+    background-color: black;
+    text-align: left;
+    font-family: Roboto, serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    display: block;
+    position: relative;
+    border: none;
+    margin: 7px 0;
+
+}
+
+.Profile-Button:hover {
+    background-color: grey;
+    color: white;
+}
     
