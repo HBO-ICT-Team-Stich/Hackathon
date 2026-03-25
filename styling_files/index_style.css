@@ -2,22 +2,19 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
 }
 
 body {
-    margin: 0;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     background-color: black;
 }
 
 main {
-    flex: 1;
-    padding: 0;
+    width: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
 }
 
 .home-background-section {
@@ -25,7 +22,7 @@ main {
     height: 825px;
     position: relative;
     overflow: hidden;
-    background-color: #56b06a;
+    background-color: #f6ad00;
     display: flex;
     flex-direction: column;
 }
@@ -34,19 +31,171 @@ main {
     content: "";
     position: absolute;
     inset: 0;
-    background-color: #b7cd31;
-    clip-path: polygon(90% 0, 100% 0, 100% 100%, 30% 100%);
+    background-color: #ffda00;
+    clip-path: polygon(86% 0, 100% 0, 100% 100%, 58% 100%);
     z-index: 0;
 }
 
-.home-background-section > .navbar {
+.home-background-section > .navbar,
+.buildings-content,
+.home-background-section > .footer {
     position: relative;
-    z-index: 10;
+    z-index: 2;
+}
+
+.home-background-section .navbar-div {
+    border-bottom-left-radius: 26px;
+    border-bottom-right-radius: 26px;
+    grid-template-columns: 56px 1fr 72px;
+    padding: 0 14px;
+}
+
+.home-background-section .navbar-title {
+    font-size: 33px;
+    font-weight: 600;
+}
+
+.home-background-section .navbar-logo {
+    width: 65px;
+    height: 64px;
+}
+
+.home-background-section .back-icon {
+    width: 40px;
+    height: 40px;
+    stroke-width: 2.2;
+}
+
+.buildings-content {
+    margin-top: 124px;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.building-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.building-thumb {
+    width: 66px;
+    height: 66px;
+    border-radius: 50%;
+    border: 4px solid #000;
+    object-fit: cover;
+    object-position: center;
+}
+
+.building-button {
+    flex: 1;
+    height: 70px;
+    border: none;
+    border-radius: 20px;
+    background: #000;
+    color: #fff;
+    font-size: 21px;
+    font-weight: 500;
+    text-align: center;
+    box-shadow: 0 4px 0 #ffffff;
+    cursor: pointer;
+}
+
+.new-building-button {
+    margin-top: 12px;
+    width: 100%;
+    min-height: 80px;
+    border-radius: 24px;
+    background:
+        linear-gradient(to right, rgba(255, 255, 255, 0.08) 1px, transparent 1px) 0 0 / 9px 9px,
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.08) 1px, transparent 1px) 0 0 / 9px 9px,
+        linear-gradient(135deg, #4caef2 0%, #3c9ae4 100%);
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: 600;
+    box-shadow: 0 7px 0 #ffffff;
+}
+
+.bottom-tools {
+    position: absolute;
+    left: 20px;
+    right: 20px;
+    top: 440px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1;
+}
+
+.slider-indicator {
+    width: 219px;
+    height: 103px;
+    --track-offset-y: -12px;
+    margin-left: 75px;
+    border-top-left-radius: 35px;
+    border-top-right-radius: 35px;
+    background: #fff;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+}
+
+.slider-indicator::before {
+    content: "";
+    position: absolute;
+    left: 70px;
+    right: 70px;
+    top: calc(50% + var(--track-offset-y));
+    transform: translateY(-50%);
+    height: 3px;
+    border-radius: 35px;
+    background: grey;
+}
+
+.dot {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #606060;
+    transform: translateY(var(--track-offset-y));
+    z-index: 1;
+}
+
+.dot-active {
+    background: #f3a900;
+}
+
+.help-fab {
+    position: absolute;
+    right: 0px;
+    width: 64px;
+    height: 65px;
+    border-radius: 50%;
+    box-shadow: 0 5px 0 #ffffff;
+    background: #000;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    z-index: 4;
+    bottom: 45px;
+}
+
+.help-fab img {
+    width: 40px;
+    height: 40px;
+    display: block;
 }
 
 .home-background-section > .footer {
     margin-top: auto;
-    position: relative;
-    z-index: 10;
+    z-index: 3;
 }
     
