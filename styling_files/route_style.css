@@ -1,0 +1,291 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	background: #000;
+	font-family: "Roboto", sans-serif;
+}
+
+main {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+.route-page {
+	width: 412px;
+	min-height: 825px;
+	background: #f42f60;
+	position: relative;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+}
+
+.route-page > .navbar,
+.route-content,
+.route-page > .footer {
+	position: relative;
+	z-index: 2;
+}
+
+.route-page .navbar-div {
+	border-bottom-left-radius: 26px;
+	border-bottom-right-radius: 26px;
+	grid-template-columns: 56px 1fr 72px;
+	padding: 0 14px;
+}
+
+.route-page .navbar-title {
+	font-size: 34px;
+	font-weight: 600;
+}
+
+.route-page .navbar-logo {
+	width: 65px;
+	height: 64px;
+}
+
+.route-page .back-icon {
+	width: 40px;
+	height: 40px;
+	stroke-width: 2.2;
+}
+
+.route-content {
+	flex: 1;
+	padding: 0;
+}
+
+.map-base {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 460px;
+	height: 760px;
+	object-fit: contain;
+	object-position: center;
+	transform: translate(-50%, -50%) rotate(-90deg);
+	transform-origin: center;
+	filter: saturate(0.92) contrast(1.02);
+}
+
+.instruction-card {
+	position: absolute;
+	top: 12px;
+	left: 14px;
+	width: 176px;
+	min-height: 78px;
+	border-radius: 12px;
+	background: #ececec;
+	color: #1d1d1d;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 10px 12px;
+	font-size: 16px;
+	font-weight: 600;
+	line-height: 1.1;
+	z-index: 3;
+}
+
+.instruction-card strong {
+	font-size: 46px;
+	line-height: 1;
+}
+
+.room-pill {
+	position: absolute;
+	right: 14px;
+	width: 104px;
+	min-height: 42px;
+	border-radius: 14px;
+	background: #000;
+	color: #fff;
+	display: grid;
+	place-items: center;
+	font-size: 21px;
+	font-weight: 500;
+	z-index: 3;
+}
+
+.room-pill-top {
+	top: 12px;
+}
+
+.room-pill-bottom {
+	top: 76px;
+}
+
+.lift-bubble {
+	position: absolute;
+	right: 63px;
+	top: 46px;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	background: #b6b6b6;
+	color: #2b2b2b;
+	display: grid;
+	place-items: center;
+	font-size: 30px;
+	line-height: 1;
+	z-index: 3;
+}
+
+.route-line {
+	position: absolute;
+	background: #ff2f59;
+	z-index: 2;
+}
+
+.route-line-h1 {
+	left: 28px;
+	top: 168px;
+	width: 42px;
+	height: 5px;
+}
+
+.route-line-v1 {
+	left: 65px;
+	top: 168px;
+	width: 5px;
+	height: 116px;
+}
+
+.route-line-h2 {
+	left: 65px;
+	top: 279px;
+	width: 170px;
+	height: 5px;
+}
+
+.route-line-v2 {
+	left: 230px;
+	top: 279px;
+	width: 5px;
+	height: 168px;
+}
+
+.route-turn-point {
+	position: absolute;
+	left: 22px;
+	top: 161px;
+	width: 12px;
+	height: 12px;
+	border-radius: 50%;
+	background: #ff3b61;
+	z-index: 3;
+}
+
+.route-alert {
+	position: absolute;
+	right: 60px;
+	top: 282px;
+	width: 58px;
+	height: 58px;
+	border-radius: 50%;
+	background: #000;
+	color: #fff;
+	display: grid;
+	place-items: center;
+	font-size: 44px;
+	font-weight: 700;
+	line-height: 1;
+	z-index: 3;
+}
+
+.route-start,
+.route-end {
+	position: absolute;
+	width: 34px;
+	height: 34px;
+	border-radius: 50%;
+	color: #fff;
+	display: grid;
+	place-items: center;
+	font-size: 16px;
+	font-weight: 600;
+	line-height: 1;
+	z-index: 3;
+}
+
+.route-start {
+	left: 158px;
+	top: 108px;
+	background: #000;
+}
+
+.route-end {
+	right: 56px;
+	bottom: 102px;
+	background: #ec3f72;
+}
+
+.steps-sheet {
+	position: absolute;
+	left: 30px;
+	right: 30px;
+	bottom: 0px;
+	height: 62px;
+	background: #f2f2f2;
+	clip-path: polygon(0 100%, 0 92%, 50% 0, 100% 92%, 100% 100%);
+	display: flex;
+	align-items: flex-end;
+	justify-content: center;
+	padding-bottom: 11px;
+	z-index: 4;
+}
+
+.steps-sheet h2 {
+	color: #111;
+	font-size: 33px;
+	font-weight: 700;
+	line-height: 1;
+	text-decoration: underline;
+	text-decoration-thickness: 3px;
+	text-underline-offset: 3px;
+}
+
+.accessibility-fab {
+	position: absolute;
+	right: 6px;
+	bottom: 40px;
+	width: 56px;
+	height: 56px;
+	border: 3px solid #ffffff;
+	border-radius: 50%;
+	background: #000;
+	display: grid;
+	place-items: center;
+	box-shadow: 0 2px 0 rgba(0, 0, 0, 0.35);
+	cursor: pointer;
+	transition: transform 0.09s ease, box-shadow 0.09s ease;
+	z-index: 5;
+}
+
+.accessibility-fab:hover {
+	transform: translateY(2px);
+	box-shadow: 0 1px 0 rgba(0, 0, 0, 0.3);
+}
+
+.accessibility-fab:active {
+	transform: translateY(5px);
+	box-shadow: 0 0 0 rgba(0, 0, 0, 0.25);
+}
+
+.accessibility-fab img {
+	width: 32px;
+	height: 32px;
+	display: block;
+	filter: brightness(0) invert(1);
+}
+
+.route-page > .footer {
+	margin-top: auto;
+}
