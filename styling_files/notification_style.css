@@ -82,6 +82,13 @@ main {
     align-items: center;
 }
 
+.notification-card p {
+    color: rgb(0, 0, 0);
+    font-size: 15px;;
+    text-align: center;
+    padding: 10px;
+}
+
 .notification-icon {
     width: 30px;
     height: 30px;
