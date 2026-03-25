@@ -99,8 +99,19 @@ main {
     font-size: 21px;
     font-weight: 500;
     text-align: center;
-    box-shadow: 0 4px 0 #ffffff;
+    box-shadow: 0 6px 0 #ffffff;
     cursor: pointer;
+    transition: transform 0.09s ease, box-shadow 0.09s ease;
+}
+
+.building-button:hover {
+    transform: translateY(2px);
+    box-shadow: 0 4px 0 #ffffff;
+}
+
+.building-button:active {
+    transform: translateY(6px);
+    box-shadow: 0 1px 0 #ffffff;
 }
 
 .new-building-button {
@@ -120,6 +131,17 @@ main {
     font-size: 16px;
     font-weight: 600;
     box-shadow: 0 7px 0 #ffffff;
+    transition: transform 0.09s ease, box-shadow 0.09s ease;
+}
+
+.new-building-button:hover {
+    transform: translateY(2px);
+    box-shadow: 0 5px 0 #ffffff;
+}
+
+.new-building-button:active {
+    transform: translateY(6px);
+    box-shadow: 0 2px 0 #ffffff;
 }
 
 .bottom-tools {
@@ -186,6 +208,17 @@ main {
     cursor: pointer;
     z-index: 4;
     bottom: 45px;
+    transition: transform 0.09s ease, box-shadow 0.09s ease;
+}
+
+.help-fab:hover {
+    transform: translateY(2px);
+    box-shadow: 0 3px 0 #ffffff;
+}
+
+.help-fab:active {
+    transform: translateY(5px);
+    box-shadow: 0 1px 0 #ffffff;
 }
 
 .help-fab img {
