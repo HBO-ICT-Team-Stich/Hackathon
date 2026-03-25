@@ -88,7 +88,7 @@ main {
     width: 232px;
     height: 232px;
     border-radius: 50%;
-    overflow: hidden;
+    overflow: visible;
     border: 5px solid #000;
     position: relative;
     background: #ddd;
@@ -98,12 +98,13 @@ main {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-radius: 50%;
 }
 
 .profile-settings {
     position: absolute;
-    left: -6px;
-    top: -6px;
+    left: -10px;
+    top: -10px;
     width: 58px;
     height: 58px;
     border-radius: 50%;
@@ -113,6 +114,7 @@ main {
     place-items: center;
     color: #fff;
     cursor: pointer;
+    z-index: 10;
 }
 
 .profile-settings svg {
@@ -121,6 +123,12 @@ main {
     stroke: currentColor;
     fill: none;
     stroke-width: 1.9;
+}
+
+.profile-settings img {
+    width: 28px;
+    height: 28px;
+    display: block;
 }
 
 .profile-name {
@@ -146,6 +154,7 @@ main {
 
 .profile-container-bottom {
     margin-top: 20px;
+    margin-bottom: 24px;
 }
 
 .Profile-Button {
@@ -191,6 +200,13 @@ main {
     stroke-width: 2;
     stroke-linecap: round;
     stroke-linejoin: round;
+}
+
+.button-icon-left img {
+    width: 24px;
+    height: 24px;
+    display: block;
+    object-fit: contain;
 }
 
 .profile-background-section .footer {
