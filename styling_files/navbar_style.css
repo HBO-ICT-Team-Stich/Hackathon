@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
 }
 
 .navbar {
@@ -45,7 +46,7 @@
 
 .navbar-title {
     color: #ffffff;
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-family: "Roboto", sans-serif;
     font-size: 33px;
     font-weight: 600;
     line-height: 1;

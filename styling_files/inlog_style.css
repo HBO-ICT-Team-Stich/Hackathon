@@ -2,6 +2,7 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+	font-family: 'Roboto', sans-serif;
 }
 
 html,
@@ -15,7 +16,7 @@ body {
 	justify-content: center;
 	align-items: center;
 	background: #101010;
-	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+	font-family: "Roboto", sans-serif;
 }
 
 .login-page {
@@ -108,7 +109,8 @@ body {
 	border: none;
 	border-radius: 28px;
 	padding: 0 24px;
-	font-size: 33px;
+	font-size: 22px;
+	font-family: "Roboto", sans-serif;
 	color: #444;
 	background: #ececec;
 	outline: none;
@@ -144,7 +146,7 @@ body {
 	border-radius: 30px;
 	background: #030303;
 	color: #fff;
-	font-size: 42px;
+	font-size: 28px;
 	font-weight: 700;
 	cursor: pointer;
 	box-shadow: 0 6px 0 #17356a;
