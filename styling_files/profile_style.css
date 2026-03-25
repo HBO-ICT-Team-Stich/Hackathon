@@ -196,20 +196,24 @@ main {
 .profile-background-section .footer {
     margin-top: auto;
     width: 100%;
-    height: 122px;
+    height: 112px;
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    padding-bottom: 10px;
+    padding-bottom: 0;
 }
 
 .profile-background-section .Footer-div {
-    width: calc(100% - 2px);
-    height: 122px;
+    width: 100%;
+    max-width: 428px;
+    height: 112px;
     border-top-left-radius: 33px;
     border-top-right-radius: 33px;
-    padding: 14px 12px 0;
-    justify-content: space-between;
+    padding: 6px 12px 12px;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin: 0 auto;
 }
 
 @media (max-width: 428px) {
