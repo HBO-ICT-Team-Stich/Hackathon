@@ -21,9 +21,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	const alternateRoute = [
 		{ left: "28px", top: "168px", width: "112px", height: "5px" },
-		{ left: "136px", top: "168px", width: "5px", height: "214px" },
-		{ left: "136px", top: "377px", width: "95px", height: "5px" },
-		{ left: "230px", top: "279px", width: "5px", height: "103px" }
+		{ left: "136px", top: "170px", width: "5px", height: "270px" },
+		{ left: "136px", top: "435px", width: "95px", height: "5px" },
+		{ left: "230px", top: "337px", width: "5px", height: "103px" }
 	];
 
 	const applyRoute = (routeState) => {
