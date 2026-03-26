@@ -185,8 +185,8 @@ main {
 
 .route-alert {
 	position: absolute;
-	right: 60px;
-	top: 282px;
+	right: 150px;
+	top: 320px;
 	width: 58px;
 	height: 58px;
 	border-radius: 50%;
@@ -197,7 +197,76 @@ main {
 	font-size: 44px;
 	font-weight: 700;
 	line-height: 1;
+	cursor: pointer;
+	border: none;
 	z-index: 3;
+}
+
+.route-alert-popup {
+	visibility: visible;
+	position: absolute;
+	right: 80px;
+	top: 150px;
+	width: 200px;
+	min-height: 120px;
+	border-radius: 26px;
+	background: #000000;
+	color: #fff;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 16px;
+	font-size: 14px;
+	text-align: center;
+	box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+	z-index: 4;
+}
+
+.route-alert-popup .pointer {
+	position: absolute;
+	left: 50%;
+	bottom: -12px;
+	transform: translateX(-50%);
+	width: 0;
+	height: 0;
+	border-left: 12px solid transparent;
+	border-right: 12px solid transparent;
+	border-top: 12px solid #000000;
+}
+
+.route-alert-popup h2 {
+	font-size: 18px;
+	font-weight: 700;
+	margin-bottom: 8px;
+}
+
+.route-alert-popup p {
+	font-size: 15px;
+	margin-bottom: 14px;
+}
+
+.route-alert-popup .accept-button {
+	background: #50AF6C;
+	color: #000;
+	border: none;
+	border-radius: 8px;
+	width: 160px;
+	height: 30px;
+	font-size: 16px;
+	cursor: pointer;
+	margin: 4px 0 8px 0;
+}
+
+.route-alert-popup .deny-button {
+	background: #F12236;
+	color: #000;
+	border: none;
+	border-radius: 8px;
+	width: 160px;
+	height: 30px;
+	font-size: 16px;
+	cursor: pointer;
 }
 
 .route-start,
@@ -244,7 +313,7 @@ main {
 
 .steps-sheet h2 {
 	color: #111;
-	font-size: 33px;
+	font-size: 28px;
 	font-weight: 700;
 	line-height: 1;
 	text-decoration: underline;
@@ -282,6 +351,8 @@ main {
 .accessibility-fab img {
 	width: 32px;
 	height: 32px;
+	position: absolute;
+	right: 8px;
 	display: block;
 	filter: brightness(0) invert(1);
 }

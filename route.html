@@ -8,6 +8,7 @@
 	<link rel="stylesheet" href="styling_files/footer_style.css">
 	<link rel="stylesheet" href="styling_files/navbar_style.css">
 	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<script src="scripts/route.js"></script>
 </head>
 <body>
 <main>
@@ -43,7 +44,14 @@
 				<div class="route-line route-line-v2"></div>
 
 				<div class="route-turn-point" aria-hidden="true"></div>
-				<div class="route-alert">!</div>
+				<button class="route-alert">!</button>
+				<div class="route-alert-popup">
+					<h2>Drukte gedetecteerd</h2>
+					<p>Wilt u een andere route kiezen?</p>
+					<button class="accept-button" type="button">Ja</button>
+					<button class="deny-button" type="button">Nee</button>
+					<div class="pointer"></div>
+				</div>
 				<div class="route-start">A</div>
 				<div class="route-end">A</div>
 
