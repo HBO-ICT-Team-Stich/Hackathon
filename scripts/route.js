@@ -6,6 +6,13 @@ document.addEventListener("DOMContentLoaded", () => {
 	const routeLines = Array.from(document.querySelectorAll(".route-line"));
 	const stepsSheet = document.querySelector(".steps-sheet");
 	const stepsSheetPopup = document.querySelector(".steps-sheet-popup");
+	const routePage = document.querySelector(".route-page");
+	const accessibilityFab = document.querySelector(".accessibility-fab");
+	const accessibilityPopup = document.querySelector(".accessibility-popup");
+	const accessibilityYesButton = document.querySelector(".accessibility-popup .accept-button");
+	const accessibilityNoButton = document.querySelector(".accessibility-popup .deny-button");
+
+	let isAccessibleRoute = false;
 
 	if (!routeAlert || !routePopup || !acceptButton || !denyButton || routeLines.length === 0) {
 		return;
@@ -67,6 +74,41 @@ document.addEventListener("DOMContentLoaded", () => {
 		stepsSheetPopup.addEventListener("click", () => {
 			stepsSheetPopup.classList.remove("open");
 			stepsSheet.style.display = "flex";
+		});
+	}
+
+	// Open popup from fab
+	if (accessibilityFab && accessibilityPopup) {
+		accessibilityPopup.style.display = "none";
+
+		accessibilityFab.addEventListener("click", () => {
+			accessibilityPopup.style.display = "flex";
+		});
+	}
+
+	// Confirm accessibility mode toggle
+	if (accessibilityYesButton && accessibilityPopup) {
+		accessibilityYesButton.addEventListener("click", () => {
+			isAccessibleRoute = true;
+			applyRoute(alternateRoute);
+			document.documentElement.style.setProperty("--route-page-bg-0", "#697DB8");
+			document.documentElement.style.setProperty("--route-page-bg-1", "#36B7C0");
+			document.documentElement.style.setProperty("--route-line-color", "#2c5fa8");
+			routePage.classList.add("accessible-mode");
+			accessibilityPopup.style.display = "none";
+		});
+	}
+
+	// Disable accessibility route on No
+	if (accessibilityNoButton && accessibilityPopup) {
+		accessibilityNoButton.addEventListener("click", () => {
+			isAccessibleRoute = false;
+			applyRoute(originalRoute);
+			document.documentElement.style.setProperty("--route-page-bg-0", "#F12236");
+			document.documentElement.style.setProperty("--route-page-bg-1", "#ff3b61");
+			document.documentElement.style.setProperty("--route-line-color", "#ff2f59");
+			routePage.classList.remove("accessible-mode");
+			accessibilityPopup.style.display = "none";
 		});
 	}
 });

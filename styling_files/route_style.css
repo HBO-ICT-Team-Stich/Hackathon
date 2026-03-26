@@ -1,3 +1,9 @@
+:root {
+	--route-page-bg-0: #F12236;
+	--route-page-bg-1: #ff3b61;
+	--route-line-color: #F12236;
+}
+
 * {
 	margin: 0;
 	padding: 0;
@@ -20,11 +26,20 @@ main {
 .route-page {
 	width: 412px;
 	min-height: 825px;
-	background: #f42f60;
+	background: var(--route-page-bg-0);
 	position: relative;
 	overflow: hidden;
 	display: flex;
 	flex-direction: column;
+}
+
+.route-page::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: var(--route-page-bg-1);
+    clip-path: polygon(86% 0, 100% 0, 100% 100%, 58% 100%);
+    z-index: 0;
 }
 
 .route-page > .navbar,
@@ -60,6 +75,7 @@ main {
 .route-content {
 	flex: 1;
 	padding: 0;
+	background: transparent;
 }
 
 .map-base {
@@ -102,7 +118,7 @@ main {
 .room-pill {
 	position: absolute;
 	right: 14px;
-	width: 104px;
+	width: 134px;
 	min-height: 42px;
 	border-radius: 14px;
 	background: #000;
@@ -111,6 +127,7 @@ main {
 	place-items: center;
 	font-size: 21px;
 	font-weight: 500;
+	box-shadow: 0 6px 0 #ffffff;
 	z-index: 3;
 }
 
@@ -140,7 +157,7 @@ main {
 
 .route-line {
 	position: absolute;
-	background: #ff2f59;
+	background: var(--route-line-color);
 	z-index: 2;
 }
 
@@ -179,7 +196,7 @@ main {
 	width: 12px;
 	height: 12px;
 	border-radius: 50%;
-	background: #ff3b61;
+	background: var(--route-line-color);
 	z-index: 3;
 }
 
@@ -225,14 +242,14 @@ main {
 
 .route-alert-popup .pointer {
 	position: absolute;
-	left: 50%;
-	bottom: -12px;
-	transform: translateX(-50%);
+	right: -12px;           /* outside the right edge */
+	top: 50%;
+	transform: translateY(-50%);
 	width: 0;
 	height: 0;
-	border-left: 12px solid transparent;
-	border-right: 12px solid transparent;
-	border-top: 12px solid #000000;
+	border-top: 12px solid transparent;
+	border-bottom: 12px solid transparent;
+	border-left: 12px solid #000;   /* points to the right */
 }
 
 .route-alert-popup h2 {
@@ -293,7 +310,7 @@ main {
 .route-end {
 	right: 56px;
 	bottom: 102px;
-	background: #ec3f72;
+	background: var(--route-line-color);
 }
 
 .steps-sheet {
@@ -428,6 +445,92 @@ main {
 	display: block;
 	font-size: 18px;
 	line-height: 1.3;
+}
+
+.accessibility-popup {
+	visibility: visible;
+	position: absolute;
+	right: 75px;
+	bottom: 30px;
+	width: 280px;
+	min-height: 120px;
+	border-radius: 26px;
+	background: #000000;
+	color: #fff;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 16px;
+	font-size: 14px;
+	text-align: center;
+	box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+	z-index: 4;
+}
+
+.accessibility-popup .pointer {
+	position: absolute;
+	right: -12px;           /* outside the right edge */
+	bottom: 10%;
+	transform: translateY(-50%);
+	width: 0;
+	height: 0;
+	border-top: 12px solid transparent;
+	border-bottom: 12px solid transparent;
+	border-left: 12px solid #000;   /* points to the right */
+}
+
+.accessibility-popup h2 {
+	font-size: 18px;
+	font-weight: 700;
+	margin-bottom: 20px;
+}
+
+.accessibility-popup p {
+	font-size: 15px;
+	margin-bottom: 14px;
+}
+
+.accessibility-popup .button-group {
+    display: flex;
+    flex-direction: row;
+    align-items: center;      /* important */
+    justify-content: center;
+    gap: 10px;
+}
+
+.accessibility-popup .button-group button {
+    height: 30px;
+    padding: 0 16px;
+    line-height: 40px;        /* same baseline/height */
+    margin: 0;                /* remove uneven margins */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+}
+
+.accessibility-popup .accept-button {
+	background: #50AF6C;
+	color: #000;
+	border: none;
+	border-radius: 8px;
+	width: 120px;
+	height: 30px;
+	font-size: 16px;
+	cursor: pointer;
+	margin: 4px 0 8px 0;
+}
+
+.accessibility-popup .deny-button {
+	background: #F12236;
+	color: #000;
+	border: none;
+	border-radius: 8px;
+	width: 120px;
+	height: 30px;
+	font-size: 16px;
+	cursor: pointer;
 }
 
 .accessibility-fab {
