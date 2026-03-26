@@ -9,45 +9,22 @@ body {
     display: flex;
     justify-content: center;
     background-color: black;
-    width: 100%;
-    min-height: 100vh;
-    padding: 0;
-    margin: 0;
 }
 
 main {
     width: 100%;
-    max-width: 1200px;
     display: flex;
     justify-content: center;
 }
 
 .home-background-section {
-    width: 100%;
-    max-width: 412px;
+    width: 412px;
     height: 825px;
     position: relative;
     overflow: hidden;
     background-color: #f6ad00;
     display: flex;
     flex-direction: column;
-    margin: 0 auto;
-}
-
-/* Tablet: 768px to 1023px */
-@media (min-width: 768px) {
-    .home-background-section {
-        max-width: 600px;
-        height: 1200px;
-    }
-}
-
-/* Laptop: 1024px and above */
-@media (min-width: 1024px) {
-    .home-background-section {
-        max-width: 900px;
-        height: 1500px;
-    }
 }
 
 .home-background-section::after {
@@ -57,20 +34,6 @@ main {
     background-color: #ffda00;
     clip-path: polygon(86% 0, 100% 0, 100% 100%, 58% 100%);
     z-index: 0;
-}
-
-/* Tablet: 768px to 1023px */
-@media (min-width: 768px) {
-    .home-background-section::after {
-        clip-path: polygon(84% 0, 100% 0, 100% 100%, 56% 100%);
-    }
-}
-
-/* Laptop: 1024px and above */
-@media (min-width: 1024px) {
-    .home-background-section::after {
-        clip-path: polygon(82% 0, 100% 0, 100% 100%, 54% 100%);
-    }
 }
 
 .home-background-section > .navbar,
@@ -87,64 +50,14 @@ main {
     padding: 0 14px;
 }
 
-/* Tablet: 768px to 1023px */
-@media (min-width: 768px) {
-    .home-background-section .navbar-div {
-        border-bottom-left-radius: 30px;
-        border-bottom-right-radius: 30px;
-        grid-template-columns: 70px 1fr 70px;
-        padding: 0 16px;
-    }
-}
-
-/* Laptop: 1024px and above */
-@media (min-width: 1024px) {
-    .home-background-section .navbar-div {
-        border-bottom-left-radius: 35px;
-        border-bottom-right-radius: 35px;
-        grid-template-columns: 90px 1fr 90px;
-        padding: 0 20px;
-    }
-}
-
 .home-background-section .navbar-title {
     font-size: 33px;
     font-weight: 600;
 }
 
-/* Tablet: 768px to 1023px */
-@media (min-width: 768px) {
-    .home-background-section .navbar-title {
-        font-size: 38px;
-    }
-}
-
-/* Laptop: 1024px and above */
-@media (min-width: 1024px) {
-    .home-background-section .navbar-title {
-        font-size: 44px;
-    }
-}
-
 .home-background-section .navbar-logo {
     width: 65px;
     height: 64px;
-}
-
-/* Tablet: 768px to 1023px */
-@media (min-width: 768px) {
-    .home-background-section .navbar-logo {
-        width: 75px;
-        height: 74px;
-    }
-}
-
-/* Laptop: 1024px and above */
-@media (min-width: 1024px) {
-    .home-background-section .navbar-logo {
-        width: 90px;
-        height: 90px;
-    }
 }
 
 .home-background-section .back-icon {
@@ -153,46 +66,12 @@ main {
     stroke-width: 2.2;
 }
 
-/* Tablet: 768px to 1023px */
-@media (min-width: 768px) {
-    .home-background-section .back-icon {
-        width: 48px;
-        height: 48px;
-    }
-}
-
-/* Laptop: 1024px and above */
-@media (min-width: 1024px) {
-    .home-background-section .back-icon {
-        width: 56px;
-        height: 56px;
-    }
-}
-
 .buildings-content {
     margin-top: 124px;
     padding: 0 20px;
     display: flex;
     flex-direction: column;
     gap: 12px;
-}
-
-/* Tablet: 768px to 1023px */
-@media (min-width: 768px) {
-    .buildings-content {
-        margin-top: 160px;
-        padding: 0 28px;
-        gap: 16px;
-    }
-}
-
-/* Laptop: 1024px and above */
-@media (min-width: 1024px) {
-    .buildings-content {
-        margin-top: 200px;
-        padding: 0 40px;
-        gap: 20px;
-    }
 }
 
 .building-row {
@@ -208,24 +87,6 @@ main {
     border: 4px solid #000;
     object-fit: cover;
     object-position: center;
-}
-
-/* Tablet: 768px to 1023px */
-@media (min-width: 768px) {
-    .building-thumb {
-        width: 85px;
-        height: 85px;
-        border: 5px solid #000;
-    }
-}
-
-/* Laptop: 1024px and above */
-@media (min-width: 1024px) {
-    .building-thumb {
-        width: 100px;
-        height: 100px;
-        border: 6px solid #000;
-    }
 }
 
 .building-button {
@@ -255,42 +116,6 @@ main {
 .building-button:active {
     transform: translateY(6px);
     box-shadow: 0 1px 0 #ffffff;
-}
-
-/* Tablet: 768px to 1023px */
-@media (min-width: 768px) {
-    .building-button {
-        height: 85px;
-        border-radius: 24px;
-        font-size: 24px;
-        box-shadow: 0 7px 0 #ffffff;
-    }
-    
-    .building-button:hover {
-        box-shadow: 0 5px 0 #ffffff;
-    }
-    
-    .building-button:active {
-        box-shadow: 0 2px 0 #ffffff;
-    }
-}
-
-/* Laptop: 1024px and above */
-@media (min-width: 1024px) {
-    .building-button {
-        height: 100px;
-        border-radius: 28px;
-        font-size: 28px;
-        box-shadow: 0 8px 0 #ffffff;
-    }
-    
-    .building-button:hover {
-        box-shadow: 0 6px 0 #ffffff;
-    }
-    
-    .building-button:active {
-        box-shadow: 0 2px 0 #ffffff;
-    }
 }
 
 .new-building-button {
@@ -323,44 +148,6 @@ main {
     box-shadow: 0 2px 0 #ffffff;
 }
 
-/* Tablet: 768px to 1023px */
-@media (min-width: 768px) {
-    .new-building-button {
-        margin-top: 16px;
-        min-height: 95px;
-        border-radius: 28px;
-        font-size: 18px;
-        box-shadow: 0 8px 0 #ffffff;
-    }
-    
-    .new-building-button:hover {
-        box-shadow: 0 6px 0 #ffffff;
-    }
-    
-    .new-building-button:active {
-        box-shadow: 0 2px 0 #ffffff;
-    }
-}
-
-/* Laptop: 1024px and above */
-@media (min-width: 1024px) {
-    .new-building-button {
-        margin-top: 20px;
-        min-height: 110px;
-        border-radius: 32px;
-        font-size: 20px;
-        box-shadow: 0 10px 0 #ffffff;
-    }
-    
-    .new-building-button:hover {
-        box-shadow: 0 7px 0 #ffffff;
-    }
-    
-    .new-building-button:active {
-        box-shadow: 0 3px 0 #ffffff;
-    }
-}
-
 .bottom-tools {
     position: absolute;
     left: 20px;
@@ -370,24 +157,6 @@ main {
     align-items: center;
     justify-content: space-between;
     z-index: 1;
-}
-
-/* Tablet: 768px to 1023px */
-@media (min-width: 768px) {
-    .bottom-tools {
-        left: 28px;
-        right: 28px;
-        top: 580px;
-    }
-}
-
-/* Laptop: 1024px and above */
-@media (min-width: 1024px) {
-    .bottom-tools {
-        left: 40px;
-        right: 40px;
-        top: 750px;
-    }
 }
 
 .slider-indicator {
@@ -405,30 +174,6 @@ main {
     gap: 9px;
 }
 
-/* Tablet: 768px to 1023px */
-@media (min-width: 768px) {
-    .slider-indicator {
-        width: 270px;
-        height: 120px;
-        margin-left: 95px;
-        border-top-left-radius: 40px;
-        border-top-right-radius: 40px;
-        gap: 11px;
-    }
-}
-
-/* Laptop: 1024px and above */
-@media (min-width: 1024px) {
-    .slider-indicator {
-        width: 320px;
-        height: 140px;
-        margin-left: 130px;
-        border-top-left-radius: 45px;
-        border-top-right-radius: 45px;
-        gap: 13px;
-    }
-}
-
 .slider-indicator::before {
     content: "";
     position: absolute;
@@ -441,24 +186,6 @@ main {
     background: grey;
 }
 
-/* Tablet: 768px to 1023px */
-@media (min-width: 768px) {
-    .slider-indicator::before {
-        left: 85px;
-        right: 85px;
-        height: 4px;
-    }
-}
-
-/* Laptop: 1024px and above */
-@media (min-width: 1024px) {
-    .slider-indicator::before {
-        left: 100px;
-        right: 100px;
-        height: 5px;
-    }
-}
-
 .dot {
     width: 16px;
     height: 16px;
@@ -466,22 +193,6 @@ main {
     background: #606060;
     transform: translateY(var(--track-offset-y));
     z-index: 1;
-}
-
-/* Tablet: 768px to 1023px */
-@media (min-width: 768px) {
-    .dot {
-        width: 19px;
-        height: 19px;
-    }
-}
-
-/* Laptop: 1024px and above */
-@media (min-width: 1024px) {
-    .dot {
-        width: 22px;
-        height: 22px;
-    }
 }
 
 .dot-active {
@@ -518,52 +229,6 @@ main {
     width: 40px;
     height: 40px;
     display: block;
-}
-
-/* Tablet: 768px to 1023px */
-@media (min-width: 768px) {
-    .help-fab {
-        width: 75px;
-        height: 75px;
-        box-shadow: 0 6px 0 #ffffff;
-        bottom: 55px;
-    }
-    
-    .help-fab:hover {
-        box-shadow: 0 4px 0 #ffffff;
-    }
-    
-    .help-fab:active {
-        box-shadow: 0 2px 0 #ffffff;
-    }
-    
-    .help-fab img {
-        width: 45px;
-        height: 45px;
-    }
-}
-
-/* Laptop: 1024px and above */
-@media (min-width: 1024px) {
-    .help-fab {
-        width: 90px;
-        height: 90px;
-        box-shadow: 0 7px 0 #ffffff;
-        bottom: 65px;
-    }
-    
-    .help-fab:hover {
-        box-shadow: 0 5px 0 #ffffff;
-    }
-    
-    .help-fab:active {
-        box-shadow: 0 2px 0 #ffffff;
-    }
-    
-    .help-fab img {
-        width: 52px;
-        height: 52px;
-    }
 }
 
 .home-background-section > .footer {
