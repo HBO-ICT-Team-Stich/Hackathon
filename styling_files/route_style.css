@@ -313,12 +313,121 @@ main {
 
 .steps-sheet h2 {
 	color: #111;
-	font-size: 28px;
+	font-size: 26px;
 	font-weight: 700;
 	line-height: 1;
 	text-decoration: underline;
 	text-decoration-thickness: 3px;
 	text-underline-offset: 3px;
+}
+
+.steps-sheet-popup {
+	position: absolute;
+	left: 30px;
+	right: 30px;
+	bottom: 0;
+	height: 0;
+	overflow: hidden;
+	z-index: 5;
+	transition: height 0.25s ease;
+	pointer-events: none;
+}
+
+.steps-sheet-popup.open {
+	height: 380px;
+	pointer-events: auto;
+}
+
+.steps-sheet-popup .steps-sheet-top {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0; /* put bar at the top */
+	height: 62px;
+	background: #f2f2f2;
+	clip-path: polygon(0 100%, 0 92%, 50% 0, 100% 92%, 100% 100%);
+	display: flex;
+	align-items: flex-end;
+	justify-content: center;
+	padding-bottom: 11px;
+	z-index: 20;
+}
+
+.steps-sheet-popup .steps-sheet-top h2 {
+	color: #111;
+	font-size: 26px;
+	font-weight: 700;
+	line-height: 1;
+	text-decoration: underline;
+	text-decoration-thickness: 3px;
+	text-underline-offset: 3px;
+}
+
+.steps-sheet-popup .steps-sheet-body {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 56px; /* start body under the bar */
+	height: 324px; /* fits inside 380px popup height with overlap */
+	background: #f2f2f2;
+	padding: 18px 20px 14px;
+	box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.14);
+	z-index: 10;
+	overflow-y: auto;
+}
+
+.steps-sheet-popup .steps-sheet-body ol {
+	margin: 0;
+	padding-left: 22px;
+	color: #111;
+	line-height: 1.35;
+	font-weight: 500;
+}
+
+.steps-sheet-popup .steps-sheet-body li + li {
+	margin-top: 10px;
+}
+
+.steps-sheet-popup .steps-card {
+	padding: 12px;
+	border-radius: 12px;
+	background: #D9DADB;
+	color: #111;
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 1.3;
+	display: flex;
+	align-items: center;      /* vertical center text + icon */
+	gap: 12px;
+	width: 100%;
+	margin-bottom: 10px;
+}
+
+.steps-sheet-popup .steps-card .icon-frame {
+	flex: 0 0 44px;           /* fixed icon column */
+	width: 44px;
+	height: 44px;
+	border-radius: 10px;
+	background: #000;
+	display: flex;
+	align-items: center;      /* center image in frame */
+	justify-content: center;
+	overflow: hidden;
+}
+
+.steps-sheet-popup .steps-card .icon-frame img {
+	width: 30px;
+	height: 30px;
+	object-fit: contain;
+	display: block;
+}
+
+.steps-sheet-popup .steps-card h3 {
+	flex: 1;
+	min-width: 0;
+	display: block;
+	font-size: 18px;
+	line-height: 1.3;
 }
 
 .accessibility-fab {

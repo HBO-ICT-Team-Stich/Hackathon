@@ -4,6 +4,8 @@ document.addEventListener("DOMContentLoaded", () => {
 	const acceptButton = document.querySelector(".route-alert-popup .accept-button");
 	const denyButton = document.querySelector(".route-alert-popup .deny-button");
 	const routeLines = Array.from(document.querySelectorAll(".route-line"));
+	const stepsSheet = document.querySelector(".steps-sheet");
+	const stepsSheetPopup = document.querySelector(".steps-sheet-popup");
 
 	if (!routeAlert || !routePopup || !acceptButton || !denyButton || routeLines.length === 0) {
 		return;
@@ -55,4 +57,16 @@ document.addEventListener("DOMContentLoaded", () => {
 		routePopup.style.display = "none";
 		routeAlert.style.display = "none";
 	});
+
+	if (stepsSheet && stepsSheetPopup) {
+		stepsSheet.addEventListener("click", () => {
+			stepsSheetPopup.classList.add("open");
+			stepsSheet.style.display = "none";
+		});
+
+		stepsSheetPopup.addEventListener("click", () => {
+			stepsSheetPopup.classList.remove("open");
+			stepsSheet.style.display = "flex";
+		});
+	}
 });
