@@ -465,7 +465,7 @@ main {
 	font-size: 14px;
 	text-align: center;
 	box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
-	z-index: 4;
+	z-index: 20;
 }
 
 .accessibility-popup .pointer {
